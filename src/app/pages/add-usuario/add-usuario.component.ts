@@ -15,4 +15,8 @@ export class AddUsuarioComponent implements OnInit {
   ngOnInit() {
   }
 
+  onsubmit(form){
+    console.log(this.usuario);
+  }
+
 }
