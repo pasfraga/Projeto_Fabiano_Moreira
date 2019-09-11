@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNavComponent } from './pages/page-nav/page-nav.component';
 import { AddUsuarioComponent } from './pages/add-usuario/add-usuario.component';
+import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNavComponent,
-    AddUsuarioComponent
+    AddUsuarioComponent,
+    ListUsuarioComponent
   ],
   imports: [
     BrowserModule,
