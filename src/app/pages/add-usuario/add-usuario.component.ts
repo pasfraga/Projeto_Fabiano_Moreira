@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/model/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-usuario',
@@ -9,26 +10,31 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class AddUsuarioComponent implements OnInit {
 
-  protected usuario:Usuario = new Usuario;
+  protected usuario: Usuario = new Usuario;
 
   constructor(
-    protected usuarioService: UsuarioService
+    protected usuarioService: UsuarioService,
+    protected router: Router
   ) { }
 
   ngOnInit() {
   }
 
-  onsubmit(form){
+  onsubmit(form) {
     console.log(this.usuario);
     this.usuarioService.save(this.usuario)
-    .subscribe(
-      res=>{
-        console.log("Cadastrado!", res);
-      },
-      xuxu=>{
-        console.log("Não cadastrado!",xuxu);
-      }
-    )
+      .subscribe(
+        res => {
+          console.log("Cadastrado!", res);
+          //alert("Cadastrado!");
+          form.reset();
+          this.router.navigate([""])
+        },
+        err => {
+          console.log("Não cadastrado!", err);
+          alert("Não cadastrado!");
+        }
+      )
   }
 
 }

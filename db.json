@@ -1,7 +1,25 @@
 {
   "usuarios": [
     {
-      "id": 0
+      "ativo": true,
+      "nome": "Ana Maria",
+      "email": "ana@email.com",
+      "pws": "111111",
+      "id": 1
+    },
+    {
+      "ativo": true,
+      "nome": "Carlos Mario",
+      "email": "cm@email.com",
+      "pws": "111111",
+      "id": 2
+    },
+    {
+      "ativo": true,
+      "nome": "Bia",
+      "email": "bia@email.com",
+      "pws": "111111",
+      "id": 3
     }
   ]
 }
