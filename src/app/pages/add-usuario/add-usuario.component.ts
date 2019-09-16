@@ -29,8 +29,8 @@ export class AddUsuarioComponent implements OnInit {
           form.reset();
           //this.router.navigate(["/"])
           this.router.navigateByUrl('/', { skipLocationChange: true })
-            .then(() =>
-              this.router.navigate(['/addUsuario']));
+          .then(() =>
+          this.router.navigate(['/addUsuario']));
           alert("Cadastrado!");
         },
         err => {
