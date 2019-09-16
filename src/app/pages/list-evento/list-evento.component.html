@@ -1,0 +1,18 @@
+<section class="container">
+        <table class="table" *ngIf="eventos | async as events">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Tema</th>
+                <th>Data.</th>
+                <th>Hora</th>
+            </tr>
+            <tr *ngFor="let e of events">
+                <td>{{e.id}}</td>
+                <td>{{e.nome}}</td>
+                <td>{{e.tema}}</td>
+                <td>{{e.data}}</td>
+                <td>{{e.hora | date: "BRL"}}</td>
+            </tr>
+        </table>
+    </section>

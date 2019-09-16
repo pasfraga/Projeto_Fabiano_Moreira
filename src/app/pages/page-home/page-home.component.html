@@ -1,1 +1,12 @@
-<p>page-home works!</p>
+<section class="container">
+    <div class="row" *ngIf="eventos | async as events">
+        <div class="card col-12 col-md-4 m-1" *ngFor="let e of events">
+            <div class="card-body">
+                <h2>{{e.nome}}</h2>
+                <p>{{e.tema}}</p>
+                <p class="text-danger font-weight-bold">Dia:<br> {{e.data | date:"dd/MM/yyyy"}}</p>
+                <p class="text-danger font-weight-bold">Horários:<br> {{e.hora }}</p>
+            </div>
+        </div>
+    </div>
+</section>

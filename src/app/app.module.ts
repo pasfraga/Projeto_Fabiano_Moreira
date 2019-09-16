@@ -11,8 +11,8 @@ import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.componen
 import { PageFooterComponent } from './pages/page-footer/page-footer.component';
 import { PageHeaderComponent } from './pages/page-header/page-header.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
-import { ListProdutoComponent } from './pages/list-produto/list-produto.component';
-import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
+import { ListEventoComponent } from './pages/list-evento/list-evento.component';
+import { AddEventoComponent } from './pages/add-evento/add-evento.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { AddProdutoComponent } from './pages/add-produto/add-produto.component';
     PageFooterComponent,
     PageHeaderComponent,
     PageHomeComponent,
-    ListProdutoComponent,
-    AddProdutoComponent
+    AddEventoComponent,
+    ListEventoComponent
   ],
   imports: [
     BrowserModule,
