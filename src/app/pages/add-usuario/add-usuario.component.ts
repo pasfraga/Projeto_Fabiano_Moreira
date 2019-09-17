@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/model/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Router } from '@angular/router';
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-add-usuario',
@@ -29,8 +30,8 @@ export class AddUsuarioComponent implements OnInit {
           form.reset();
           //this.router.navigate(["/"])
           this.router.navigateByUrl('/', { skipLocationChange: true })
-          .then(() =>
-          this.router.navigate(['/addUsuario']));
+            .then(() =>
+              this.router.navigate(['/addUsuario']));
           alert("Cadastrado!");
         },
         err => {
@@ -38,6 +39,19 @@ export class AddUsuarioComponent implements OnInit {
           alert("Não cadastrado!");
         }
       )
+  }
+
+  protected cep: string;
+
+  buscaCep() {
+    if (this.cep.length > 7) {
+      this.usuarioService.getEndereco(this.cep)
+        .subscribe(
+          res => {
+            console.log(res);
+          }
+        )
+    }
   }
 
 }
