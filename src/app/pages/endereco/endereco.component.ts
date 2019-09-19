@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { EnderecoService } from '../../services/endereco.service';
+import { Endereco } from '../../model/endereco';
 
 @Component({
   selector: 'app-endereco',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnderecoComponent implements OnInit {
 
-  constructor() { }
+  @Input() protected endereco:Endereco = new Endereco;
+
+  constructor(
+    protected enderecoService:EnderecoService,
+  ) { }
 
   ngOnInit() {
+  }
+  protected cep: string;
+
+  buscaCep() {
+    if (this.cep.length > 7) {
+      this.enderecoService.getEndereco(this.cep)
+        .subscribe(
+          res => {
+            if(res.erro){
+              alert("CEP não encontrado!")
+            }
+            console.log(res);
+            this.endereco = res
+          }
+        )
+    }
   }
 
 }
