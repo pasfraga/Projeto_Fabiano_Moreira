@@ -20,6 +20,23 @@
       "email": "pm@email.com",
       "pws": "111111",
       "id": 3
+    },
+    {
+      "ativo": true,
+      "endereco": {
+        "erro": false,
+        "logradouro": "Rua Monsenhor Castelo Branco",
+        "localidade": "Rio de Janeiro",
+        "uf": "RJ",
+        "cep": "21240-190",
+        "bairro": "Jardim América",
+        "complemento": "casa",
+        "numero": "105"
+      },
+      "nome": "Paulo",
+      "email": "teste@123.com",
+      "pws": "123456",
+      "id": 4
     }
   ],
   "eventos": [

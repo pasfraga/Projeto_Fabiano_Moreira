@@ -28,7 +28,12 @@ export class EnderecoComponent implements OnInit {
               alert("CEP não encontrado!")
             }
             console.log(res);
-            this.endereco = res
+            //this.endereco = res
+            this.endereco.cep = res.cep
+            this.endereco.logradouro = res.logradouro
+            this.endereco.localidade = res.localidade
+            this.endereco.bairro = res.bairro
+            this.endereco.uf = res.uf
           }
         )
     }
