@@ -2,24 +2,20 @@
   "usuarios": [
     {
       "ativo": true,
-      "nome": "Ana Maria",
-      "email": "ana@email.com",
-      "pws": "111111",
+      "endereco": {
+        "erro": false,
+        "logradouro": "Rua Monsenhor Castelo Branco",
+        "localidade": "Rio de Janeiro",
+        "uf": "RJ",
+        "cep": "21240-190",
+        "bairro": "Jardim América",
+        "complemento": "casa",
+        "numero": "105"
+      },
+      "nome": "Paulo",
+      "email": "teste@gmail.com",
+      "pws": "123456",
       "id": 1
-    },
-    {
-      "ativo": true,
-      "nome": "Carlos Mario",
-      "email": "cm@email.com",
-      "pws": "111111",
-      "id": 2
-    },
-    {
-      "ativo": true,
-      "nome": "Paula Martins",
-      "email": "pm@email.com",
-      "pws": "111111",
-      "id": 3
     },
     {
       "ativo": true,
@@ -33,10 +29,27 @@
         "complemento": "casa",
         "numero": "105"
       },
-      "nome": "Paulo",
-      "email": "teste@123.com",
+      "email": "teste@gmasil.com",
       "pws": "123456",
-      "id": 4
+      "nome": "Paulo 2",
+      "id": 2
+    },
+    {
+      "ativo": true,
+      "endereco": {
+        "erro": false,
+        "logradouro": "Rua Monsenhor Castelo Branco",
+        "localidade": "Rio de Janeiro",
+        "uf": "RJ",
+        "cep": "21240-190",
+        "bairro": "Jardim América",
+        "complemento": "casa",
+        "numero": "105"
+      },
+      "nome": "Paulo 3",
+      "email": "teste@gmasil.com",
+      "pws": "123456",
+      "id": 3
     }
   ],
   "eventos": [

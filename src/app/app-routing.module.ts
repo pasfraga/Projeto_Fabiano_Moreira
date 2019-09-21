@@ -8,6 +8,7 @@ import { AddEventoComponent } from './pages/add-evento/add-evento.component';
 const routes: Routes = [
   { path: "", component: PageHomeComponent },
   { path: "addUsuario", component: AddUsuarioComponent },
+  { path: "addUsuario/:id", component: AddUsuarioComponent },
   { path: "addEvento", component: AddEventoComponent },
 ];
 

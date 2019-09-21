@@ -25,4 +25,14 @@ export class UsuarioService {
   getEndereco(cep) {
     return this.http.get("https://viacep.com.br/ws/" + cep + "/json/")
   }
+
+  update (usuario,id){
+    return this.http.put(this.db + "usuarios/"+id,usuario)
+  }
+  delete (id){
+    return this.http.delete(this.db+"usuarios/"+id)
+  }
+  get(id){
+    return this.http.get<Usuario>(this.db+"usuario/"+id)
+  }
 }
