@@ -6,6 +6,12 @@
                 <th>Tema</th>
                 <th>Data</th>
                 <th>Hora</th>
+                <th>
+                    <i class="fa fa-edit"></i>
+                </th>
+                <th>
+                    <i class="fa fa-trash"></i>
+                </th>
             </tr>
             <tr *ngFor="let e of events">
                 <td>{{e.id}}</td>
@@ -13,6 +19,12 @@
                 <td>{{e.tema}}</td>
                 <td>{{e.data | date:"dd/MM/yyyy"}}</td>
                 <td>{{e.hora}}</td>
+                <td routerLink="/addEvento/{{e.id}}" style="cursor: pointer">
+                    <i class="fa fa-edit"></i>/
+                </td>
+                <td (click)="apagar(e)" style="cursor: pointer">
+                    <i class="fa fa-trash"></i>X
+                </td>
             </tr>
         </table>
     </section>

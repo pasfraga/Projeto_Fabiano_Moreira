@@ -14,6 +14,7 @@ import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { ListEventoComponent } from './pages/list-evento/list-evento.component';
 import { AddEventoComponent } from './pages/add-evento/add-evento.component';
 import { EnderecoComponent } from './pages/endereco/endereco.component';
+import { PageEventoComponent } from './pages/page-evento/page-evento.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EnderecoComponent } from './pages/endereco/endereco.component';
     PageHomeComponent,
     AddEventoComponent,
     ListEventoComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    PageEventoComponent,
   ],
   imports: [
     BrowserModule,

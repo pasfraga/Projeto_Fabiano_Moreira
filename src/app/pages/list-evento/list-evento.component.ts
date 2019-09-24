@@ -16,6 +16,14 @@ export class ListEventoComponent implements OnInit {
   ngOnInit() {
     this.eventos = this.eventoService.getAll();
   }
- 
+  apagar(evento){
+    if(confirm("Apagar os dados do evento: \n" + evento.nome + "?")){
+      this.eventoService.delete(evento.id).subscribe(
+        res=>{
+          alert("Evento apagado!");
+        }
+      )
+    }
+  }
  
  }

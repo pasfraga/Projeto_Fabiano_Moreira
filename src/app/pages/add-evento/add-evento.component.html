@@ -21,9 +21,13 @@
                 <small class="form-text text-muted"></small>
             </div>
            
-            <div class="form-group text-right">
+            <div class="form-group text-right" *ngIf="!id">
                 <button type="submit" class="btn btn-primary ml-2" [disabled]="fc.invalid">Salvar</button>
-                <button type="reset" class="btn btn-primary ml-2">Cancelar</button>
+                <button type="reset" class="btn btn-primary ml-2" [routerLink]="['/addEvento']">Cancelar</button>
+            </div>
+            <div class="form-group text-right" *ngIf="id">
+                <button type="submit" class="btn btn-primary ml-2" [disabled]="fc.invalid">Atualizar</button>
+                <button type="reset" class="btn btn-primary ml-2" [routerLink]="['/addEvento']">Cancelar</button>
             </div>
         </form>
     </section>

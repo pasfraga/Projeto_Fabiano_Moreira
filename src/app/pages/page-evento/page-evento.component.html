@@ -1,0 +1,14 @@
+<section class="container">
+    <div class="row" *ngIf="evento">
+        <div class="card col-12 m-1">
+            <div class="card-body">
+                <h2>{{evento.nome}}</h2>
+                <p>{{evento.tema}}</p>
+                <p class="text-danger font-weight-bold">Dia:<br> {{evento.data | date:"dd/MM/yyyy"}}</p>
+                <p class="text-danger font-weight-bold">Horários:<br> {{evento.hora }}</p>
+                <a href="/" class="btn btn-primary">Voltar</a>
+                
+            </div>
+        </div>
+    </div>
+</section>

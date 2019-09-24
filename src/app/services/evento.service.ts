@@ -21,4 +21,13 @@ export class EventoService {
   getAll(){
     return this.http.get(this.db + "eventos")
   }
+  update (evento,id){
+    return this.http.put(this.db + "eventos/"+id,evento)
+  }
+  delete (id){
+    return this.http.delete(this.db+"eventos/"+id)
+  }
+  get(id){
+    return this.http.get<Evento>(this.db+"eventos/"+id)
+  }
 }
